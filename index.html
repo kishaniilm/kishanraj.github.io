@@ -975,6 +975,23 @@
   <!-- TOAST NOTIFICATION CONTAINER -->
   <div class="toast-notification" id="toast-notify"></div>
 
-  <script src="script.js?v=12"></script>
+  <script src="script.js?v=14"></script>
+  <script>
+    // Bulletproof loader dismiss: ensures site is always revealed within 1.5 seconds
+    (function() {
+      function hideLoader() {
+        var l = document.getElementById('loader');
+        if (l && !l.classList.contains('hidden')) {
+          var bar = document.getElementById('loader-bar');
+          var txt = document.getElementById('loader-text');
+          if (bar) bar.style.width = '100%';
+          if (txt) txt.textContent = '100%';
+          setTimeout(function() { l.classList.add('hidden'); }, 200);
+        }
+      }
+      window.addEventListener('load', function() { setTimeout(hideLoader, 1000); });
+      setTimeout(hideLoader, 2000);
+    })();
+  </script>
 </body>
 </html>
