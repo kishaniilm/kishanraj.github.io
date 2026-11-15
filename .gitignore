@@ -1,0 +1,7 @@
+# Ignore heavy backup files and archives
+video_frames_24fps_original_quality.zip
+portfolio-updated.zip
+frames_original_backup/
+video_frames_24fps_original_quality/
+Man_sitting_at_outdoor_table_126abf20.mp4
+Screenshot*.png

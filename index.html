@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kishan Raj — Marketing Strategist &amp; Business Analyst</title>
+  
+  <!-- Google Fonts: Anton (Headline), Caveat (Script), Plus Jakarta Sans (UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css?v=12">
+</head>
+<body>
+
+  <!-- Loading Screen (Deep Obsidian) -->
+  <div class="loader-overlay" id="loader">
+    <div class="loader-logo">KR</div>
+    <div class="loader-bar-bg">
+      <div class="loader-bar-fill" id="loader-bar"></div>
+    </div>
+    <div class="loader-text" id="loader-text">0%</div>
+  </div>
+
+  <!-- FIXED BACKGROUND CANVAS (Scroll Frame Animation Engine) -->
+  <div id="canvas-container">
+    <canvas id="scroll-canvas"></canvas>
+  </div>
+
+  <!-- SOFT CINEMATIC VIGNETTE (Focuses light on subject, melts background into black) -->
+  <div class="cinematic-vignette"></div>
+
+  <!-- AMBIENT GLOW ORBS (Atmospheric lighting depth) -->
+  <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow glow-center-right" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom-left" aria-hidden="true"></div>
+
+  <!-- MINIMALIST RIGHT SIDE PROGRESS TRACKER -->
+  <div class="scroll-progress-track" id="scroll-progress-track">
+    <div class="scroll-progress-thumb" id="scroll-progress-thumb"></div>
+    <div class="scroll-progress-label" id="scroll-progress-label">001 / 192</div>
+  </div>
+
+  <!-- FOREGROUND WEBSITE CONTENT -->
+  <div class="portfolio-content">
+
+    <!-- TOP NAVIGATION -->
+    <header class="top-nav">
+      <div class="nav-left">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-mark">KR</span>
+          <span class="role-title">KISHAN RAJ // MARKETING &amp; BUSINESS ANALYTICS</span>
+        </a>
+      </div>
+      <div class="nav-right">
+        <a href="#hero" class="nav-link">HOME</a>
+        <a href="#aboutme" class="nav-link">ABOUT ME</a>
+        <a href="#projects" class="nav-link">PROJECTS</a>
+        <a href="#certifications" class="nav-link">CREDENTIALS</a>
+        <a href="#resume" class="nav-link highlight">RESUME</a>
+        <a href="#contact" class="freelance-badge">
+          <span class="badge-dot"></span> OPEN TO WORK <span class="sparkle">✦</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      
+      <!-- GIANT CONDENSED BACKGROUND TYPOGRAPHY (Bold solid red style) -->
+      <div class="hero-bg-text-container" aria-hidden="true">
+        <h1 class="hero-bg-text">MARKETING &amp; ANALYTICS</h1>
+      </div>
+
+      <!-- HERO FOREGROUND GRID -->
+      <div class="hero-grid">
+        
+        <!-- Left Hero Profile -->
+        <div class="hero-left reveal-fade">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h2 class="hero-name text-gradient">KISHAN<br>RAJ</h2>
+          <h3 class="hero-role text-gradient-red">MARKETING STRATEGIST &amp; BUSINESS ANALYST</h3>
+          <p class="hero-inst">MBA in Marketing &amp; Business Analytics • IILM University</p>
+          
+          <p class="hero-bio">
+            Bridging creative marketing campaigns and data-driven analytics. Experienced in digital marketing, omnichannel dealer sales, e-commerce, and business intelligence with Power BI &amp; Advanced Excel to turn insights into measurable revenue growth.
+          </p>
+          <p class="hero-positioning">
+            <em>"I am interested in marketing strategy and business analytics roles. Through hands-on internship experience in sales, digital marketing, and global compliance operations, I have developed strengths in campaign execution, data-driven decision making, and cross-channel growth. I want to contribute to organisations that value creative marketing backed by rigorous analytics."</em>
+          </p>
+          
+          <div class="hero-actions-row">
+            <div class="hero-status">
+              <span class="status-indicator"></span>
+              <span class="status-text">AVAILABLE FOR ROLES</span>
+            </div>
+            <a href="#resume" class="hero-view-resume-btn">
+              <span>View Resume</span>
+              <span class="arrow-down">↓</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Center Spacer for Video Character -->
+        <div class="hero-center-spacer"></div>
+
+        <!-- Right Hero Floating Cards & Stats -->
+        <div class="hero-right reveal-fade">
+          
+          <div class="floating-vision-pill shimmer-pill">
+            <span class="vision-sparkle">✦</span>
+            <p>Blending creative marketing campaigns with analytics to drive 3x business growth.</p>
+          </div>
+
+          <div class="hero-stats-stack">
+            <div class="stat-item">
+              <span class="stat-number" data-target="3" data-suffix="x">3x</span>
+              <span class="stat-label">MARKETING &amp; SALES<br>GROWTH DELIVERED</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="100" data-suffix="+">100+</span>
+              <span class="stat-label">DAILY OPERATIONS<br>&amp; KYC RESOLVED</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="1" data-suffix="st">1st</span>
+              <span class="stat-label">PRIZE ANALYTICAL &amp;<br>STRATEGY PRESENTATION</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Hero Bottom Scroll Indicator -->
+      <div class="scroll-indicator" id="scroll-indicator">
+        <span class="scroll-indicator-text">Scroll to explore</span>
+        <div class="scroll-line-container">
+          <div class="scroll-line-drop"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section class="aboutme-section" id="aboutme">
+      <div class="section-kicker">[ 01 // ABOUT ME ]</div>
+      <div class="section-header">
+        <h2 class="section-title text-gradient">WHO I AM &amp; WHAT DRIVES ME</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="aboutme-grid">
+        <div class="aboutme-card story-card reveal-card">
+          <div class="aboutme-card-icon">📖</div>
+          <h3 class="aboutme-card-title">MY STORY</h3>
+          <p class="aboutme-card-text">
+            Growing up in Ranchi, I developed a natural curiosity for understanding how businesses work and how products reach people. After completing my B.Com from Ranchi University, I pursued an MBA in Marketing &amp; Business Analytics at IILM University, Greater Noida — driven by the desire to blend creative marketing with data-driven strategy. My journey from a commerce student to a marketing strategist has been shaped by hands-on corporate experiences, competitive wins, and a constant hunger to learn.
+          </p>
+        </div>
+
+        <div class="aboutme-card values-card reveal-card">
+          <div class="aboutme-card-icon">💡</div>
+          <h3 class="aboutme-card-title">VALUES &amp; STRENGTHS</h3>
+          <div class="aboutme-values-list">
+            <div class="value-item">
+              <span class="value-bullet">✦</span>
+              <div>
+                <strong>Data-Driven Thinking</strong>
+                <p>I believe every marketing decision should be backed by evidence. From Power BI dashboards to Excel models, I turn raw data into actionable insights.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <span class="value-bullet">✦</span>
+              <div>
+                <strong>Adaptability &amp; Resilience</strong>
+                <p>Whether managing 100+ daily KYC cases at Concentrix or driving 3x sales growth in the field, I thrive in fast-paced, high-pressure environments.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <span class="value-bullet">✦</span>
+              <div>
+                <strong>Creative Problem Solving</strong>
+                <p>Recognised with a First Prize at IILM for analytical thinking — I approach challenges with both logic and creativity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="aboutme-card interests-card reveal-card">
+          <div class="aboutme-card-icon">🎯</div>
+          <h3 class="aboutme-card-title">INTERESTS &amp; PASSIONS</h3>
+          <p class="aboutme-card-text">
+            Beyond academics, I'm passionate about understanding consumer behaviour, exploring emerging digital marketing trends, and attending industry events. I actively participate in the Analytics Club at IILM, where I help coordinate guest speaker sessions and collaborative learning workshops for 200+ students. I enjoy case study analysis, following brand strategies of companies like Patanjali and Microsoft, and exploring how data transforms traditional business models.
+          </p>
+          <div class="aboutme-interest-tags">
+            <span>CONSUMER BEHAVIOUR</span>
+            <span>BRAND STRATEGY</span>
+            <span>DIGITAL TRENDS</span>
+            <span>EVENT COORDINATION</span>
+            <span>CASE ANALYSIS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED PROJECTS &amp; CORPORATE EXPERIENCE SECTION -->
+    <section class="projects-section" id="projects">
+      <div class="section-kicker">[ 02 // SELECTED WORK &amp; IMPACT ]</div>
+      <div class="section-header">
+        <h2 class="section-title text-gradient">MARKETING CAMPAIGNS &amp; ANALYTICS PROJECTS</h2>
+        <div class="section-line"></div>
+        <a href="#certifications" class="section-link">VIEW CERTIFICATIONS <span class="arrow">➔</span></a>
+      </div>
+
+      <div class="projects-grid">
+        
+        <!-- Project 01: India Tyre Company -->
+        <article class="project-card reveal-card">
+          <div class="project-media">
+            <span class="project-impact-badge">📈 +300% Revenue</span>
+            <img src="assets/india-tyre.svg" alt="India Tyre Company Sales & Digital Marketing Metrics" loading="lazy">
+            <div class="media-hover-overlay">
+              <span class="view-btn">View Experience ➔</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-header-row">
+              <span class="project-num">01</span>
+              <div class="project-titles">
+                <h3 class="project-name">INDIA TYRE COMPANY</h3>
+                <p class="project-category">DIGITAL MARKETING &amp; FIELD SALES // 3X GROWTH</p>
+              </div>
+              <span class="project-arrow">➔</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 02: Concentrix Daksh & DHL -->
+        <article class="project-card reveal-card">
+          <div class="project-media">
+            <span class="project-impact-badge">⚡ 100+ Daily SLA</span>
+            <img src="assets/concentrix.svg" alt="Concentrix DHL International Case Compliance Dashboard" loading="lazy">
+            <div class="media-hover-overlay">
+              <span class="view-btn">View Experience ➔</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-header-row">
+              <span class="project-num">02</span>
+              <div class="project-titles">
+                <h3 class="project-name">CONCENTRIX DAKSH (DHL)</h3>
+                <p class="project-category">GLOBAL COMPLIANCE &amp; 100+ DAILY KYC OPERATIONS</p>
+              </div>
+              <span class="project-arrow">➔</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 03: Marketing Analytics & Power BI -->
+        <article class="project-card reveal-card">
+          <div class="project-media">
+            <span class="project-impact-badge">🎯 HCL Capstone</span>
+            <img src="assets/analytics.svg" alt="Power BI & Excel Business Analytics Dashboard" loading="lazy">
+            <div class="media-hover-overlay">
+              <span class="view-btn">View Dashboard ➔</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-header-row">
+              <span class="project-num">03</span>
+              <div class="project-titles">
+                <h3 class="project-name">BI &amp; MARKETING ANALYTICS</h3>
+                <p class="project-category">POWER BI &amp; ADVANCED EXCEL (HCL TECH CERTIFIED)</p>
+              </div>
+              <span class="project-arrow">➔</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SIP (SUMMER INTERNSHIP PROGRAMME) SECTION -->
+    <section class="sip-section" id="sip">
+      <div class="section-kicker">[ 03 // SUMMER INTERNSHIP PROGRAMME ]</div>
+      <div class="section-header">
+        <h2 class="section-title text-gradient">INTERNSHIP EXPERIENCE</h2>
+        <div class="section-line"></div>
+        <span class="section-tag-badge">FIELD VERIFIED</span>
+      </div>
+
+      <div class="sip-card reveal-card">
+        <div class="sip-header">
+          <div class="sip-company-info">
+            <h3 class="sip-company">INDIA TYRE COMPANY</h3>
+            <p class="sip-role">Sales &amp; Digital Marketing Intern</p>
+            <p class="sip-period">May 2026 – July 2026</p>
+          </div>
+          <div class="sip-impact-stat">
+            <span class="sip-impact-number">3x</span>
+            <span class="sip-impact-label">SALES GROWTH<br>ACHIEVED</span>
+          </div>
+        </div>
+
+        <div class="sip-content-grid">
+          <div class="sip-detail-block">
+            <h4 class="sip-detail-title">CONTEXT &amp; ORGANISATION</h4>
+            <p class="sip-detail-text">India Tyre Company specialises in riding gear — helmets, riding jackets, gloves, and accessories. During my summer internship, I was placed in the Sales &amp; Digital Marketing team, bridging both offline dealer channels and online e-commerce platforms.</p>
+          </div>
+          <div class="sip-detail-block">
+            <h4 class="sip-detail-title">MY RESPONSIBILITIES &amp; CONTRIBUTION</h4>
+            <ul class="sip-detail-list">
+              <li>Managed and executed targeted digital marketing campaigns across social media platforms to increase brand visibility and product reach.</li>
+              <li>Conducted field sales through dealer and retail visits, building relationships with channel partners and understanding ground-level market demand.</li>
+              <li>Developed promotional strategies for online platforms (e-commerce) and offline retail, creating an omnichannel sales approach.</li>
+              <li>Analysed sales data to identify high-performing products and underperforming channels, informing campaign adjustments.</li>
+            </ul>
+          </div>
+          <div class="sip-detail-block">
+            <h4 class="sip-detail-title">OUTCOME &amp; LEARNING</h4>
+            <p class="sip-detail-text"><strong>Boosted sales 3x</strong> through a combination of targeted social media promotions, online campaign execution, and strengthened offline field sales. This experience taught me how to balance creative marketing with practical sales operations, and the importance of cross-channel consistency in driving measurable growth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES SECTION -->
+    <section class="casestudies-section" id="casestudies">
+      <div class="section-kicker">[ 04 // CASE STUDIES ]</div>
+      <div class="section-header">
+        <h2 class="section-title text-gradient">ANALYTICAL CASE WORK</h2>
+        <div class="section-line"></div>
+        <span class="section-tag-badge">INDEPENDENT ANALYSIS</span>
+      </div>
+
+      <div class="casestudies-grid">
+        <div class="casestudy-card reveal-card">
+          <div class="casestudy-badge">STRATEGIC ANALYSIS</div>
+          <h3 class="casestudy-title">Patanjali — Market Strategy &amp; Value Proposition</h3>
+          <div class="casestudy-detail">
+            <h4>Context</h4>
+            <p>Academic case study analysing Patanjali's rapid growth in the FMCG sector, examining how it leveraged brand positioning, Ayurveda-based differentiation, and aggressive pricing to disrupt established players.</p>
+          </div>
+          <div class="casestudy-detail">
+            <h4>My Approach</h4>
+            <p>Applied strategic frameworks including SWOT analysis, Porter's Five Forces, and competitive positioning maps. Evaluated Patanjali's value proposition, distribution strategy, and brand messaging.</p>
+          </div>
+          <div class="casestudy-detail">
+            <h4>Learning</h4>
+            <p>Understood how cultural branding and cost leadership can coexist. Learned to systematically break down a company's strategy using structured analytical frameworks.</p>
+          </div>
+        </div>
+
+        <div class="casestudy-card reveal-card">
+          <div class="casestudy-badge">COMPETITIVE ANALYSIS</div>
+          <h3 class="casestudy-title">Microsoft — Competitive Advantage &amp; Innovation</h3>
+          <div class="casestudy-detail">
+            <h4>Context</h4>
+            <p>Academic case study examining Microsoft's transformation under Satya Nadella — the pivot to cloud computing, subscription models, and enterprise solutions that revitalised market dominance.</p>
+          </div>
+          <div class="casestudy-detail">
+            <h4>My Approach</h4>
+            <p>Analysed Microsoft's business model evolution, revenue diversification, and strategic acquisitions (LinkedIn, GitHub). Used competitive analysis frameworks to compare positioning against Google, Apple, and Amazon.</p>
+          </div>
+          <div class="casestudy-detail">
+            <h4>Learning</h4>
+            <p>Gained insights into how corporate strategy pivots can rejuvenate legacy businesses. Recognised the importance of ecosystem thinking and platform strategy in sustaining competitive advantage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPETITIONS & ACHIEVEMENTS SECTION -->
+    <section class="achievements-section" id="achievements">
+      <div class="section-kicker">[ 05 // COMPETITIONS &amp; ACHIEVEMENTS ]</div>
+      <div class="section-header">
+        <h2 class="section-title text-gradient">RECOGNITION &amp; MILESTONES</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="achievements-grid">
+        <div class="achievement-card reveal-card gold-border">
+          <div class="achievement-icon-wrap gold">
+            <span class="achievement-icon">🏆</span>
+          </div>
+          <div class="achievement-info">
+            <div class="achievement-type-badge gold">1ST PLACE</div>
+            <h3 class="achievement-title">First Prize — Analytical Thinking &amp; Presentation</h3>
+            <p class="achievement-org">IILM School of Business</p>
+            <div class="achievement-details">
+              <h4>Context &amp; Preparation</h4>
+              <p>Competed against MBA peers in a structured analytical thinking and presentation challenge. Prepared through intensive case analysis practice and presentation rehearsals.</p>
+              <h4>My Contribution &amp; Outcome</h4>
+              <p>Delivered a compelling, data-backed presentation demonstrating structured problem framing, logical reasoning, and executive communication skills. Awarded First Prize by the faculty panel.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal-card">
+          <div class="achievement-icon-wrap">
+            <span class="achievement-icon">🚀</span>
+          </div>
+          <div class="achievement-info">
+            <div class="achievement-type-badge">RUNNER-UP</div>
+            <h3 class="achievement-title">Runner-Up — Business Incubator Programme</h3>
+            <p class="achievement-org">IILM University</p>
+            <div class="achievement-details">
+              <h4>Context &amp; Preparation</h4>
+              <p>Participated in a business incubation programme where teams developed and pitched innovative, scalable startup concepts with complete business models.</p>
+              <h4>My Contribution &amp; Outcome</h4>
+              <p>Led the market analysis and financial viability assessment. Secured Runner-Up position for developing an innovative and scalable business idea with a clear value proposition.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal-card">
+          <div class="achievement-icon-wrap">
+            <span class="achievement-icon">🎤</span>
+          </div>
+          <div class="achievement-info">
+            <div class="achievement-type-badge">LEADERSHIP</div>
+            <h3 class="achievement-title">Analytics Club Member &amp; Event Coordinator</h3>
+            <p class="achievement-org">IILM University</p>
+            <div class="achievement-details">
+              <h4>Context &amp; Role</h4>
+              <p>Active member of the Analytics Club, responsible for coordinating college club events, including guest speaker sessions and knowledge-sharing workshops.</p>
+              <h4>Contribution &amp; Impact</h4>
+              <p>Coordinated events with 200+ attendees, demonstrating leadership, event planning, and public speaking skills. Helped create a collaborative learning environment for fellow MBA students.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION: VERIFIED CERTIFICATIONS &amp; HONORS SHOWCASE -->
+    <section class="certifications-section" id="certifications">
+      <div class="section-kicker">[ 06 // ACCREDITATIONS &amp; CREDENTIALS ]</div>
+      <div class="section-header">
+        <h2 class="section-title text-gradient">VERIFIED CERTIFICATIONS &amp; HONORS</h2>
+        <div class="section-line"></div>
+        <span class="section-tag-badge">INDUSTRY ACCREDITED</span>
+      </div>
+
+      <div class="certs-grid">
+        
+        <!-- Cert 01: Power BI & Excel (HCL Tech) -->
+        <div class="cert-card reveal-card" onclick="openCertModal('assets/cert-hcl.svg', 'Power BI & Excel Project Certification — HCL Tech')">
+          <div class="cert-media">
+            <img src="assets/cert-hcl.svg" alt="HCL Tech Power BI & Excel Project Certification" loading="lazy">
+            <div class="cert-hover-overlay">
+              <span class="cert-zoom-btn">View Credential 🔍</span>
+            </div>
+          </div>
+          <div class="cert-info">
+            <div class="cert-top-row">
+              <span class="cert-issuer-badge">HCL TECH</span>
+              <span class="cert-status-badge">✓ VERIFIED</span>
+            </div>
+            <h3 class="cert-card-title">Power BI &amp; Excel Project Certification</h3>
+            <p class="cert-card-desc">Completed comprehensive curriculum with a real-life capstone business project submission.</p>
+            <div class="cert-tags">
+              <span>POWER BI</span>
+              <span>ADVANCED EXCEL</span>
+              <span>DAX MODELING</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 02: Lean Six Sigma (KPMG iCAN) -->
+        <div class="cert-card reveal-card" onclick="openCertModal('assets/cert-kpmg.svg', 'Lean Six Sigma Certification — KPMG iCAN')">
+          <div class="cert-media">
+            <img src="assets/cert-kpmg.svg" alt="KPMG iCAN Lean Six Sigma Certification" loading="lazy">
+            <div class="cert-hover-overlay">
+              <span class="cert-zoom-btn">View Credential 🔍</span>
+            </div>
+          </div>
+          <div class="cert-info">
+            <div class="cert-top-row">
+              <span class="cert-issuer-badge">KPMG iCAN</span>
+              <span class="cert-status-badge">✓ VERIFIED</span>
+            </div>
+            <h3 class="cert-card-title">Lean Six Sigma Certification</h3>
+            <p class="cert-card-desc">5-day intensive corporate training on process improvement, DMAIC waste reduction, and data-driven problem solving.</p>
+            <div class="cert-tags">
+              <span>LEAN SIX SIGMA</span>
+              <span>DMAIC</span>
+              <span>PROCESS OPTIMIZATION</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 03: 1st Prize Award (IILM School of Business) -->
+        <div class="cert-card reveal-card" onclick="openCertModal('assets/cert-iilm.svg', 'First Prize Award in Analytical Thinking — IILM School of Business')">
+          <div class="cert-media">
+            <img src="assets/cert-iilm.svg" alt="IILM School of Business 1st Prize Award" loading="lazy">
+            <div class="cert-hover-overlay">
+              <span class="cert-zoom-btn">View Award 🔍</span>
+            </div>
+          </div>
+          <div class="cert-info">
+            <div class="cert-top-row">
+              <span class="cert-issuer-badge gold">IILM UNIVERSITY</span>
+              <span class="cert-status-badge gold">★ 1ST PLACE</span>
+            </div>
+            <h3 class="cert-card-title">1st Prize — Analytical Thinking &amp; Presentation</h3>
+            <p class="cert-card-desc">Awarded first prize at IILM School of Business for structured case analysis, analytical problem framing, and executive presentation.</p>
+            <div class="cert-tags">
+              <span>ANALYTICAL THINKING</span>
+              <span>CASE ANALYSIS</span>
+              <span>STRATEGY</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3-COLUMN SHOWCASE SECTION: EDUCATION & SKILLS | METHODOLOGY | STATEMENT -->
+    <section class="details-section" id="about">
+      <div class="section-kicker">[ 07 // COMPETENCIES &amp; PROCESS ]</div>
+      <div class="details-grid">
+        
+        <!-- Column 1: EDUCATION & CREDENTIALS -->
+        <div class="detail-col education-skills-col reveal-card">
+          <h2 class="col-main-title">EDUCATION &amp; CREDENTIALS</h2>
+          
+          <div class="detail-group">
+            <h3 class="group-sub-title">EDUCATION</h3>
+            
+            <div class="timeline-entry">
+              <div class="timeline-row">
+                <h4 class="entry-title">MBA — Marketing &amp; Business Analytics</h4>
+                <span class="entry-date">2025 — 2027</span>
+              </div>
+              <p class="entry-subtitle">IILM University, Greater Noida (Pursuing)</p>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="timeline-row">
+                <h4 class="entry-title">B.Com (Bachelor of Commerce)</h4>
+                <span class="entry-date">2024</span>
+              </div>
+              <p class="entry-subtitle">Ranchi University, Ranchi</p>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="timeline-row">
+                <h4 class="entry-title">Class XII &amp; Class X (CBSE)</h4>
+                <span class="entry-date">2021 / 2019</span>
+              </div>
+              <p class="entry-subtitle">DAV Public School</p>
+            </div>
+          </div>
+
+          <div class="detail-group">
+            <h3 class="group-sub-title">INDUSTRY CERTIFICATIONS</h3>
+            
+            <div class="cert-item">
+              <span class="cert-bullet">✦</span>
+              <div>
+                <strong class="cert-name">Power BI &amp; Excel Project Certification</strong>
+                <p class="cert-issuer">HCL Tech — Real-life Capstone Project Submission</p>
+              </div>
+            </div>
+
+            <div class="cert-item">
+              <span class="cert-bullet">✦</span>
+              <div>
+                <strong class="cert-name">Lean Six Sigma Certification</strong>
+                <p class="cert-issuer">KPMG iCAN — Process Improvement &amp; Data-Driven Problem Solving</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-group">
+            <h3 class="group-sub-title">MARKETING &amp; ANALYTICS SKILLS</h3>
+            <div class="skills-tag-cloud">
+              <span class="skill-pill">DIGITAL MARKETING</span>
+              <span class="skill-pill">CAMPAIGN EXECUTION</span>
+              <span class="skill-pill">SOCIAL MEDIA PROMOTION</span>
+              <span class="skill-pill">MARKET ANALYSIS</span>
+              <span class="skill-pill">E-COMMERCE</span>
+              <span class="skill-pill">DEALER &amp; RETAIL SALES</span>
+              <span class="skill-pill">POWER BI</span>
+              <span class="skill-pill">ADVANCED EXCEL</span>
+              <span class="skill-pill">LEAN SIX SIGMA</span>
+              <span class="skill-pill">KYC COMPLIANCE</span>
+              <span class="skill-pill">CANVA</span>
+              <span class="skill-pill">MS OFFICE</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: MARKETING & ANALYTICS METHODOLOGY -->
+        <div class="detail-col process-col reveal-card">
+          <h2 class="col-main-title">CAMPAIGN &amp; ANALYTICS PROCESS</h2>
+
+          <div class="process-timeline">
+            
+            <!-- Step 01 -->
+            <div class="process-step">
+              <div class="step-badge">
+                <span class="step-num">01</span>
+              </div>
+              <div class="step-content">
+                <h4 class="step-title">MARKET RESEARCH &amp; DISCOVERY</h4>
+                <p class="step-desc">Identifying target audience, understanding competitor strategies, and defining growth goals.</p>
+              </div>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="process-step">
+              <div class="step-badge">
+                <span class="step-num">02</span>
+              </div>
+              <div class="step-content">
+                <h4 class="step-title">DATA AGGREGATION &amp; AUDIT</h4>
+                <p class="step-desc">Auditing cross-channel sales, online customer engagement, and field dealer metrics.</p>
+              </div>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="process-step">
+              <div class="step-badge">
+                <span class="step-num">03</span>
+              </div>
+              <div class="step-content">
+                <h4 class="step-title">BI MODELING &amp; CAMPAIGN PLANNING</h4>
+                <p class="step-desc">Constructing Power BI dashboards, advanced Excel models, and high-ROI promotional blueprints.</p>
+              </div>
+            </div>
+
+            <!-- Step 04 -->
+            <div class="process-step">
+              <div class="step-badge">
+                <span class="step-num">04</span>
+              </div>
+              <div class="step-content">
+                <h4 class="step-title">OMNICHANNEL EXECUTION</h4>
+                <p class="step-desc">Rolling out targeted social campaigns, e-commerce promotions, and offline dealer sales enablement.</p>
+              </div>
+            </div>
+
+            <!-- Step 05 -->
+            <div class="process-step">
+              <div class="step-badge">
+                <span class="step-num">05</span>
+              </div>
+              <div class="step-content">
+                <h4 class="step-title">OPTIMIZE &amp; MULTIPLY</h4>
+                <p class="step-desc">Applying Lean Six Sigma waste reduction to maximize campaign ROI and scale sales 3x.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Column 3: CRIMSON STATEMENT CARD -->
+        <div class="detail-col quote-col reveal-card">
+          <div class="quote-card">
+            <span class="quote-mark">“</span>
+            <blockquote class="quote-text">
+              The sweet spot of modern business is where creative marketing strategy meets rigorous data analytics to drive measurable growth.
+            </blockquote>
+            <p class="quote-author-signature">Kishan Raj</p>
+            <div class="quote-card-footer">
+              <span class="footer-sparkle">✦</span>
+              <p class="footer-cta-text">FIRST PRIZE FOR ANALYTICAL THINKING — IILM SCHOOL OF BUSINESS</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESUME SECTION -->
+    <section class="resume-section" id="resume">
+      <div class="section-kicker">[ 08 // EXECUTIVE DOSSIER ]</div>
+      <div class="resume-section-header">
+        <div class="resume-title-wrap">
+          <span class="section-tag">VERIFIED CURRICULUM VITAE</span>
+          <h2 class="resume-main-title text-gradient">RESUME &amp; CREDENTIALS</h2>
+        </div>
+        
+        <div class="resume-actions-bar">
+          <div class="resume-tab-switch">
+            <button class="resume-tab active" id="tab-doc" onclick="switchResumeTab('doc')">Executive Document</button>
+            <button class="resume-tab" id="tab-pdf" onclick="switchResumeTab('pdf')">Original PDF Viewer</button>
+          </div>
+          
+          <a href="Kishan_Raj_Resume.pdf" download="Kishan_Raj_Resume.pdf" class="download-resume-btn glow-button">
+            <span>Download Resume PDF</span>
+            <span class="btn-icon">↓</span>
+          </a>
+          
+          <a href="Kishan_Raj_Resume.pdf" target="_blank" rel="noopener" class="open-resume-btn">
+            <span>Open in Tab</span>
+            <span class="btn-icon">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tab 1: Executive Rendered Document View -->
+      <div class="resume-document-container" id="resume-doc-view">
+        <div class="resume-paper reveal-card">
+          
+          <!-- Resume Header with Verified Ribbon -->
+          <div class="resume-doc-header">
+            <div class="header-main">
+              <div class="doc-badge-pill">OFFICIAL CANDIDATE PROFILE</div>
+              <h1 class="doc-name">KISHAN RAJ</h1>
+              <p class="doc-headline">MBA – Marketing &amp; Business Analytics | IILM University, Greater Noida</p>
+              <div class="doc-contact-row">
+                <span class="copyable" onclick="copyContact('phone', '+919905521050', this)" title="Click to copy">📞 +91 9905521050</span>
+                <span>•</span>
+                <span class="copyable" onclick="copyContact('email', 'kishan.raj.gnmba27@iilm.edu', this)" title="Click to copy">✉ kishan.raj.gnmba27@iilm.edu</span>
+                <span>•</span>
+                <span>📍 Greater Noida / Delhi NCR, India</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Summary -->
+          <div class="doc-section">
+            <h3 class="doc-sec-title">PROFESSIONAL SUMMARY</h3>
+            <p class="doc-summary-text">
+              MBA (Marketing &amp; Business Analytics) candidate with hands-on experience in sales, digital marketing and compliance operations. Skilled in Advanced Excel, Power BI and campaign execution, with a track record of driving sales across online and offline channels. Seeking a Marketing &amp; Analytics role to bridge creative brand strategy with data-driven business decisions.
+            </p>
+          </div>
+
+          <!-- Education -->
+          <div class="doc-section">
+            <h3 class="doc-sec-title">EDUCATION</h3>
+            
+            <div class="doc-entry">
+              <div class="entry-header">
+                <div class="entry-title-block">
+                  <strong>MBA – Marketing &amp; Business Analytics</strong>
+                  <span class="entry-institution">IILM University, Greater Noida</span>
+                </div>
+                <span class="entry-year">2025 – 2027 (Pursuing)</span>
+              </div>
+            </div>
+
+            <div class="doc-entry">
+              <div class="entry-header">
+                <div class="entry-title-block">
+                  <strong>B.Com (Bachelor of Commerce)</strong>
+                  <span class="entry-institution">Ranchi University, Ranchi</span>
+                </div>
+                <span class="entry-year">2024</span>
+              </div>
+            </div>
+
+            <div class="doc-entry">
+              <div class="entry-header">
+                <div class="entry-title-block">
+                  <strong>Class XII</strong>
+                  <span class="entry-institution">DAV Public School (CBSE)</span>
+                </div>
+                <span class="entry-year">2021</span>
+              </div>
+            </div>
+
+            <div class="doc-entry">
+              <div class="entry-header">
+                <div class="entry-title-block">
+                  <strong>Class X</strong>
+                  <span class="entry-institution">DAV Public School (CBSE)</span>
+                </div>
+                <span class="entry-year">2019</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Internship Experience -->
+          <div class="doc-section">
+            <h3 class="doc-sec-title">INTERNSHIP EXPERIENCE</h3>
+
+            <div class="doc-entry">
+              <div class="entry-header">
+                <strong>India Tyre Company</strong> — Sales &amp; Digital Marketing Intern
+                <span class="entry-year">May 2026 – Jul 2026</span>
+              </div>
+              <ul class="doc-bullets">
+                <li>Worked on sales and digital marketing for riding gear (helmets, riding jackets, gloves and accessories), driving sales through offline channels (dealer and retail visits) and online channels (e-commerce and digital platforms).</li>
+                <li><strong>Boosted sales 3x</strong> through targeted digital marketing campaigns, including social media promotion and online campaign execution, while strengthening offline field sales efforts.</li>
+              </ul>
+            </div>
+
+            <div class="doc-entry">
+              <div class="entry-header">
+                <strong>Concentrix Daksh Services India Pvt. Ltd.</strong> — Associate
+                <span class="entry-year">Oct 2022 – May 2023</span>
+              </div>
+              <ul class="doc-bullets">
+                <li>Managed international case processing for the <strong>DHL process</strong>, ensuring accurate documentation review, cross-border compliance and timely resolution of global customer cases.</li>
+                <li>Handled high-volume <strong>KYC clearance (100+ cases daily)</strong> while maintaining strict adherence to compliance and quality guidelines.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Academic Projects -->
+          <div class="doc-section">
+            <h3 class="doc-sec-title">ACADEMIC PROJECTS</h3>
+            <ul class="doc-bullets">
+              <li><strong>Design Thinking &amp; Entrepreneurial Management:</strong> Performed field-based empathy mapping and problem analysis in an underprivileged community to develop sustainable entrepreneurial solutions.</li>
+              <li><strong>Case Study Analysis – Patanjali &amp; Microsoft:</strong> Evaluated market strategy, value proposition and competitive advantage using strategic frameworks.</li>
+            </ul>
+          </div>
+
+          <!-- Certifications -->
+          <div class="doc-section">
+            <h3 class="doc-sec-title">CERTIFICATIONS</h3>
+            <ul class="doc-bullets">
+              <li><strong>Power BI &amp; Excel Project Certification – HCL Tech:</strong> Completed course with a real-life project submission.</li>
+              <li><strong>Lean Six Sigma Certification – KPMG iCAN:</strong> 5-day intensive course covering process improvement, waste reduction and data-driven problem solving.</li>
+            </ul>
+          </div>
+
+          <!-- Skills Grid -->
+          <div class="doc-section">
+            <h3 class="doc-sec-title">SKILLS MATRIX</h3>
+            <div class="doc-skills-grid">
+              <div><strong>Marketing &amp; Sales:</strong> Digital Marketing, Social Media Promotion, Campaign Execution, E-commerce, Dealer &amp; Retail Channel Sales, Market Analysis</div>
+              <div><strong>Analytics &amp; Tools:</strong> Advanced Excel, Power BI, MS Office, Canva</div>
+              <div><strong>Process &amp; Compliance:</strong> Lean Six Sigma, KYC, Documentation Review, Cross-border Compliance</div>
+              <div><strong>Professional:</strong> Communication, Leadership, Teamwork, Event Planning, Public Speaking, Self-motivated, Fast Learner</div>
+            </div>
+          </div>
+
+          <!-- Leadership & Achievements -->
+          <div class="doc-section">
+            <div class="doc-two-col">
+              <div>
+                <h3 class="doc-sec-title">POSITIONS OF RESPONSIBILITY</h3>
+                <p><strong>Analytics Club Member, IILM University</strong></p>
+                <p class="doc-sub-text">Coordinated and managed college club events, including guest speaker sessions with 200+ attendees, demonstrating leadership, event planning and public speaking skills.</p>
+              </div>
+              <div>
+                <h3 class="doc-sec-title">KEY ACHIEVEMENTS</h3>
+                <ul class="doc-bullets">
+                  <li><strong>First Prize</strong> at IILM School of Business for analytical thinking and presentation skills.</li>
+                  <li><strong>Runner-Up</strong> in a Business Incubator Program for developing an innovative and scalable startup concept.</li>
+                  <li>Collaborated with club members to host and manage multiple academic and cultural events.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Tab 2: Embedded Original PDF Viewer -->
+      <div class="resume-pdf-container" id="resume-pdf-view" style="display: none;">
+        <div class="pdf-frame-wrapper">
+          <iframe src="Kishan_Raj_Resume.pdf" title="Kishan Raj Resume PDF" class="resume-iframe"></iframe>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CONTACT / FOOTER SECTION: "LET'S WORK TOGETHER" -->
+    <section class="contact-section" id="contact">
+      <div class="section-kicker">[ 09 // CAREER DIRECTION &amp; CONTACT ]</div>
+      <div class="contact-container reveal-card">
+        
+        <!-- Left Contact Info & Interactive Form -->
+        <div class="contact-left">
+          <h2 class="contact-main-heading text-gradient">
+            LET'S WORK<br>TOGETHER <span class="contact-sparkle">✦</span>
+          </h2>
+
+          <!-- Career Direction Statement -->
+          <div class="career-direction-block">
+            <h3 class="career-direction-title">MY CAREER DIRECTION</h3>
+            <p class="career-direction-text">
+              I am actively pursuing roles in <strong>marketing strategy, brand management, and business analytics</strong>. I am drawn to organisations that blend creative campaign thinking with data-driven decision making — where marketing is both an art and a science.
+            </p>
+            <p class="career-direction-text">
+              My strengths in digital marketing, campaign execution, Power BI analytics, and cross-channel sales position me to contribute meaningfully to teams driving measurable business growth. My immediate development goals include deepening my expertise in marketing analytics tools, gaining experience in brand strategy for consumer-facing businesses, and building a portfolio of successful campaign outcomes.
+            </p>
+          </div>
+
+          <div class="contact-meta-list">
+            <div class="meta-item copyable-card" onclick="copyContact('email', 'kishan.raj.gnmba27@iilm.edu', this)">
+              <span class="meta-icon">✉</span>
+              <div class="meta-info">
+                <span class="meta-label">Email Address</span>
+                <span class="meta-val">kishan.raj.gnmba27@iilm.edu</span>
+              </div>
+              <span class="copy-badge">Copy</span>
+            </div>
+
+            <div class="meta-item copyable-card" onclick="copyContact('phone', '+919905521050', this)">
+              <span class="meta-icon">📞</span>
+              <div class="meta-info">
+                <span class="meta-label">Phone &amp; WhatsApp</span>
+                <span class="meta-val">+91 9905521050</span>
+              </div>
+              <span class="copy-badge">Copy</span>
+            </div>
+
+            <div class="meta-item">
+              <span class="meta-icon">🏛</span>
+              <div class="meta-info">
+                <span class="meta-label">Institution</span>
+                <span class="meta-val">IILM University, Greater Noida</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <span class="meta-icon">📍</span>
+              <div class="meta-info">
+                <span class="meta-label">Location</span>
+                <span class="meta-val">Greater Noida / Delhi NCR, India</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <span class="meta-icon">🔗</span>
+              <div class="meta-info">
+                <span class="meta-label">LinkedIn Profile</span>
+                <a href="https://www.linkedin.com/in/kishan-raj-a90305377" target="_blank" rel="noopener" class="meta-val meta-link">linkedin.com/in/kishan-raj</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Interactive Message Box with Send Button -->
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <input type="text" id="sender-name" placeholder="Your Name" required>
+              <input type="email" id="sender-email" placeholder="Your Email" required>
+            </div>
+            <textarea id="sender-message" rows="3" placeholder="Tell me about your marketing campaign or analytics opportunity..." required></textarea>
+            
+            <button type="submit" class="send-message-btn glow-button" id="send-btn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-arrow">➔</span>
+            </button>
+            <div class="form-feedback" id="form-feedback"></div>
+          </form>
+
+        </div>
+
+        <!-- Right Laptop Showcase Mockup -->
+        <div class="contact-right">
+          <div class="laptop-showcase floating-laptop">
+            <img src="assets/laptop.svg" alt="Portfolio Showcase Mockup" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bottom Bar -->
+      <footer class="bottom-footer">
+        <p>© 2026 Kishan Raj. Marketing &amp; Business Analytics. Crafted with precision. Website design assisted by AI tools; all content is genuine and personally verified.</p>
+        <p class="privacy-notice">This website uses Google Analytics to understand visits. No personal visitor data is published.</p>
+        <a href="#hero" class="back-to-top">Back to top ↑</a>
+      </footer>
+
+    </section>
+
+  </div>
+
+  <!-- CERTIFICATE LIGHTBOX MODAL -->
+  <div class="cert-modal" id="cert-modal" onclick="closeCertModal()">
+    <div class="cert-modal-content" onclick="event.stopPropagation()">
+      <button class="cert-modal-close" onclick="closeCertModal()">✕</button>
+      <img id="cert-modal-img" src="" alt="Certificate Preview">
+      <h4 id="cert-modal-title"></h4>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-notification" id="toast-notify"></div>
+
+  <script src="script.js?v=12"></script>
+</body>
+</html>
