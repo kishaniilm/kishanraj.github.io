@@ -55,9 +55,16 @@
   function drawFrame(frameIndex) {
     let img = images[frameIndex];
 
-    if (!loadedStatus[frameIndex] || !img) {
+    if (!loadedStatus[frameIndex] || !img || !img.complete || img.naturalWidth === 0) {
       img = findNearestLoadedImage(frameIndex);
-      if (!img) return;
+      if (!img || !img.complete || img.naturalWidth === 0) {
+        // Fallback: clear canvas to deep obsidian black if no frames loaded
+        const cw = canvas.width;
+        const ch = canvas.height;
+        ctx.fillStyle = '#050608';
+        ctx.fillRect(0, 0, cw, ch);
+        return;
+      }
     }
 
     const cw = canvas.width;
@@ -80,23 +87,29 @@
     const offsetX = (cw - renderWidth) / 2 + currentTiltX * (cw * 0.015);
     const offsetY = (ch - renderHeight) / 2 + currentTiltY * (ch * 0.015);
 
-    ctx.drawImage(img, offsetX, offsetY, renderWidth, renderHeight);
-    lastDrawnIndex = frameIndex;
+    try {
+      ctx.drawImage(img, offsetX, offsetY, renderWidth, renderHeight);
+      lastDrawnIndex = frameIndex;
+    } catch (e) {
+      // Ignore draw errors if image is in broken state
+    }
   }
 
   function findNearestLoadedImage(targetIdx) {
-    if (loadedStatus[targetIdx] && images[targetIdx]) return images[targetIdx];
+    if (loadedStatus[targetIdx] && images[targetIdx] && images[targetIdx].naturalWidth > 0) {
+      return images[targetIdx];
+    }
     let step = 1;
     while (targetIdx - step >= 1 || targetIdx + step <= TOTAL_FRAMES) {
-      if (targetIdx - step >= 1 && loadedStatus[targetIdx - step]) {
+      if (targetIdx - step >= 1 && loadedStatus[targetIdx - step] && images[targetIdx - step] && images[targetIdx - step].naturalWidth > 0) {
         return images[targetIdx - step];
       }
-      if (targetIdx + step <= TOTAL_FRAMES && loadedStatus[targetIdx + step]) {
+      if (targetIdx + step <= TOTAL_FRAMES && loadedStatus[targetIdx + step] && images[targetIdx + step] && images[targetIdx + step].naturalWidth > 0) {
         return images[targetIdx + step];
       }
       step++;
     }
-    return images[1] || null;
+    return (images[1] && images[1].naturalWidth > 0) ? images[1] : null;
   }
 
   // Calculate target frame and cinematic zoom from full page scroll position
@@ -176,6 +189,11 @@
 
   // Frame loading manager
   function preloadFrames() {
+    // Safety fallback: dismiss loader after 2 seconds regardless of image loading status
+    setTimeout(() => {
+      dismissLoader();
+    }, 2000);
+
     const firstImg = new Image();
     firstImg.src = FRAME_PATH(1);
     images[1] = firstImg;
@@ -189,7 +207,9 @@
     };
 
     firstImg.onerror = () => {
+      loadedCount++;
       loadRemainingFrames();
+      onFrameLoaded();
     };
   }
 
@@ -212,15 +232,23 @@
     }
   }
 
+  function dismissLoader() {
+    if (loader && !loader.classList.contains('hidden')) {
+      if (loaderBar) loaderBar.style.width = '100%';
+      if (loaderText) loaderText.textContent = '100%';
+      setTimeout(() => {
+        loader.classList.add('hidden');
+      }, 200);
+    }
+  }
+
   function onFrameLoaded() {
     const percent = Math.min(100, Math.round((loadedCount / TOTAL_FRAMES) * 100));
     if (loaderBar) loaderBar.style.width = percent + '%';
     if (loaderText) loaderText.textContent = `${percent}%`;
 
     if (loadedCount >= TOTAL_FRAMES) {
-      setTimeout(() => {
-        if (loader) loader.classList.add('hidden');
-      }, 250);
+      dismissLoader();
     }
   }
 
